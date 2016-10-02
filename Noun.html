@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Noun</title>
+
+	<meta charset="utf-8"/>
+  <style type="text/css">
+html {
+    /* the line height value of 1.9 is fixed for a line height multiple of 1.4 in the text view */
+    font: normal 75.0%/1.9 serif;
+}
+
+body {
+    font-family: 'Helvetica', Helvetica, Georgia, serif;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    overflow:hidden;
+    background-color: #f2f2f2;
+    color: #3c3c3c;
+}
+
+/**
+ *
+    Wrappers
+ *
+ */
+
+#wrapper {
+    position: fixed;
+    width: 99.9%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 1.0em;
+}
+
+#wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    -webkit-transition: all .45s ease-in;
+    position: relative;
+}
+#wrapper::-webkit-scrollbar-button:start:decrement, #wrapper::-webkit-scrollbar-button:end:increment {
+    height: 0px;
+    display: block;
+    background-color: transparent;
+}
+#wrapper::-webkit-scrollbar-track-piece {
+    background-color:
+    transparent;
+    -webkit-border-radius: 6px;
+}
+#wrapper::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #c8c8c8;
+    -webkit-border-radius: 6px;
+    -webkit-transition: all .45s ease-in;
+}
+
+#content {
+    width: 850px;
+    margin: 0 auto 0 auto;
+    padding: 30px 0 30px 0;
+}
+
+/**
+ *
+    Headings
+ *
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+h1, 
+h2, 
+h3 { margin-bottom: 1rem; }
+
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.00rem; }
+h6 { font-size: 0.85rem; }
+
+/**
+ *
+	Paragraphs
+ *
+ */
+
+p {
+	margin: 0 0 1.5em;
+}
+
+/**
+ *
+    Block quotes
+ *
+ */
+
+blockquote {
+    margin: 0 0 1.5em;
+    width: 96%;
+    padding: 0 10px;
+    border-left: 3px solid #ddd;
+    color: #777;
+}
+
+/**
+ *
+	Code Blocks
+ *
+ */
+
+pre code {
+	word-wrap: normal;
+	white-space: pre-wrap;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    -webkit-border-radius: 0;
+}
+
+pre {
+	white-space: pre-wrap;
+    width: 96%;
+    margin-bottom: 24px;
+    overflow: hidden;
+    padding: 3px 10px;
+    -webkit-border-radius: 3px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+code {
+	white-space: nowrap;
+	font-family: monospace;
+    padding: 2px;
+    -webkit-border-radius: 3px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+small {
+	font-size: 65%;
+}
+
+/**
+ *
+    Dictionary Definition
+ *
+ */
+
+dt {
+	display: inline;
+    font-weight:bold;
+}
+
+dd {
+	display: block;
+}
+
+/**
+ *
+    Anchors
+ *
+ */
+
+a {
+    color: #308bd8;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/**
+ *
+    Horizontal rules
+ *
+ */
+
+hr {
+    width: 100%;
+    margin: 3em auto;
+    border: 0;
+    color: #eee;
+    background-color: #ccc;
+    height: 1px;
+    -webkit-box-shadow:0px 1px 0px rgba(255, 255, 255, 0.75);
+}
+
+/**
+ *
+    Lists
+ *
+ */
+
+ol, ul {
+    list-style-position: outside;
+    padding-left: 0;
+    margin-left: 1.5em;
+}
+
+ol li, ul li {
+    text-align: -webkit-match-parent;
+}
+
+li p {
+    margin: 0.5em 0 0.5em;
+}
+
+ol ol, ol ul, ul ul, ul ol {
+    padding-left: 1.5em;
+}
+
+/**
+ *
+    Tables
+ *
+ */
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-spacing: 0;
+}
+
+table th {
+    padding: 3px 10px;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+table tr {
+}
+
+table td {
+    padding: 3px 10px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+/**
+ *
+    Images
+ *
+ */
+
+img {
+    border: none;
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+}
+
+/**
+ *
+    Marks
+ *
+ */
+
+mark {
+    background: #fefec0;
+    padding:1px 3px;
+}
+
+/**
+ *
+    Footnotes
+ *
+ */
+.footnote {
+    font-size: 0.8rem;
+    vertical-align: super;
+}
+.footnotes ol {
+    font-weight: bold;
+}
+.footnotes ol li {
+    text-align: -webkit-match-parent;
+}
+
+.footnotes ol li p {
+    font-weight: normal;
+}
+
+/**
+ *
+    Figures and Captions
+ *
+ */
+caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+figure {
+    display: block;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/**
+ *
+    Custom classes
+ *
+ */
+
+.shadow {
+    -webkit-box-shadow: 0 2px 4px #999;
+}
+
+.source {
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    margin: -40px auto;
+}
+#wrapper {
+    width: 99.9%;
+}
+#content {
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile support */
+@media only screen and (max-device-width:1024px) {
+    html {
+        overflow: auto;
+    }
+
+    #wrapper {
+        overflow: auto;
+        position: relative;
+    }
+}@media print {
+/* Printing support.
+ * Override all printing colors to match the Light theme.
+ */
+img, pre, blockquote, table, figure {
+    page-break-inside: avoid;
+}
+body {
+    background-color:#fff;
+}
+#wrapper {
+    position: static;
+    overflow: hidden;
+    color: #000;
+    width: 100%;
+    margin: 0 auto;
+}
+.footnotes {
+    page-break-before: always;
+}
+#content {
+    margin: 0 auto;
+    padding: 0;
+    width: 98%;
+}
+#top-fader, #bottom-fader {
+    display: none;
+}
+hr {
+    color:#ddd;
+    background-color:#ddd;
+    -webkit-box-shadow:0px 1px 0px #ddd;
+}
+pre {
+    background-color:transparent;
+    border: 1px solid #ddd;
+}
+code {
+    background-color:transparent;
+    border: 1px solid #ddd;
+}
+blockquote {
+    border-left: 3px solid #ddd;
+    color: #000;
+}
+ol {
+    /*
+     * Override the list style when printing to ensure list
+     * markers won't get cut.
+     */
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+}
+table {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+table th {
+    background-color:transparent;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+table td {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+mark {
+    background:transparent;
+    color: #000;
+}
+.source {
+    color: #000;
+}
+}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="content">
+<p><img style="float: left;" src="https://sinoedu.github.io/Images/Logo.png">
+<br> </br>
+<p> </p></p>
+
+<p><strong><h4> &nbsp; &nbsp; &nbsp;<a href="https://sinoedu.github.io/"> Home page</a> &nbsp; &nbsp; <a href="https://sinoedu.github.io/Verb.html">Verb</a> &nbsp; &nbsp; &nbsp; <a href="https://sinoedu.github.io/Adjective.html">Adjective</a> &nbsp; &nbsp; &nbsp; <a href="https://sinoedu.github.io/Adverb.html">Adverb</a> &nbsp; &nbsp; &nbsp; <a href="https://sinoedu.github.io/Sentence.html">Sentence</a> &nbsp; &nbsp; &nbsp; <a href="https://sinoedu.github.io/Noun.html">Noun</a> &nbsp;&nbsp; &nbsp; <a href="https://sinoedu.github.io/Svenska_Prov.html">Test</a> &nbsp;&nbsp; &nbsp; <a href="https://sinoedu.github.io/Myself.html">Myself</a></h4></strong></p>
+
+<hr />
+
+<center> <h3> Substantiv </h3></center>
+
+<h5> demonstrativa pronomen : singular </h5>
+
+<p>Den här/där + en ord (singular)<br/>
+Det här/där + ett ord (singular)<br/>
+<code>Demonstrativt pronomen + substantiv bestämd form</code><br/>
+Den här/där bullen<br/>
+Det här/där äpplet </p>
+
+<hr />
+
+<h5> Substantiv: obestämd form plural </h5>
+
+<p><code>en-ord har plural på -r (-or, -ar, eller -er) (inte ord på -are)</code><br/>
+<code>ett-ord har plural på -n eller samma form</code></p>
+
+<figure>
+<img src="" alt="substantiv" />
+<figcaption>substantiv</figcaption>
+</figure>
+
+<hr />
+
+<p>En words end with <strong>-a</strong> </p>
+
+<table>
+<colgroup>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th>Grupp 1</th>
+	<th style="text-align:center;"></th>
+	<th></th>
+	<th><strong>-or</strong></th>
+	<th style="text-align:center;"></th>
+	<th></th>
+</tr>
+<tr>
+	<th>Singular Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Singular Bestämd</th>
+	<th>Plural Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Plural Bestämd</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>en karta</td>
+	<td style="text-align:center;"> +n</td>
+	<td>kartan</td>
+	<td>kartor</td>
+	<td style="text-align:center;"><strong>+na</strong></td>
+	<td>kartorna</td>
+</tr>
+<tr>
+	<td>en väska</td>
+	<td style="text-align:center;">+n</td>
+	<td>väskan</td>
+	<td>väskor</td>
+	<td style="text-align:center;"></td>
+	<td>väskorna</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p>En words do <strong>not emphasis the ending</strong> </p>
+
+<table>
+<colgroup>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th>Grupp 2</th>
+	<th style="text-align:center;"></th>
+	<th></th>
+	<th><strong>-ar</strong></th>
+	<th style="text-align:center;"></th>
+	<th></th>
+</tr>
+<tr>
+	<th>Singular Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Singular Bestämd</th>
+	<th>Plural Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Plural Bestämd</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>en fru</td>
+	<td style="text-align:center;"> +n</td>
+	<td>frun</td>
+	<td>fruar</td>
+	<td style="text-align:center;"><strong>+na</strong></td>
+	<td>fruarna</td>
+</tr>
+<tr>
+	<td>en spegel</td>
+	<td style="text-align:center;">+n</td>
+	<td>spegeln</td>
+	<td>speglar</td>
+	<td style="text-align:center;"></td>
+	<td>spelar</td>
+</tr>
+<tr>
+	<td>en frukost</td>
+	<td style="text-align:center;"> +en</td>
+	<td>frukosten</td>
+	<td>frukostar</td>
+	<td style="text-align:center;"></td>
+	<td>frukostarna</td>
+</tr>
+<tr>
+	<td>en middag</td>
+	<td style="text-align:center;"> +en</td>
+	<td>middagen</td>
+	<td>middagar</td>
+	<td style="text-align:center;"></td>
+	<td>middagarna</td>
+</tr>
+<tr>
+	<td>en dag</td>
+	<td style="text-align:center;">+en</td>
+	<td>dagen</td>
+	<td>dagar</td>
+	<td style="text-align:center;"></td>
+	<td>dagarna</td>
+</tr>
+<tr>
+	<td>en bok</td>
+	<td style="text-align:center;">+en</td>
+	<td>boken</td>
+	<td>bokar</td>
+	<td style="text-align:center;"></td>
+	<td>bokarna</td>
+</tr>
+<tr>
+	<td>en sol</td>
+	<td style="text-align:center;"> +en</td>
+	<td>solen</td>
+	<td>solar</td>
+	<td style="text-align:center;"></td>
+	<td>solarna</td>
+</tr>
+<tr>
+	<td>en dörr</td>
+	<td style="text-align:center;">+en</td>
+	<td>dörren</td>
+	<td>dörrar</td>
+	<td style="text-align:center;"></td>
+	<td>dörrarna</td>
+</tr>
+<tr>
+	<td>en timme</td>
+	<td style="text-align:center;">+n</td>
+	<td>timmen</td>
+	<td>timmar</td>
+	<td style="text-align:center;"></td>
+	<td>timmarna</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p>En word <strong>emphasis the ending</strong> </p>
+
+<table>
+<colgroup>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th>Grupp 3</th>
+	<th style="text-align:center;"></th>
+	<th></th>
+	<th>-er</th>
+	<th style="text-align:center;"></th>
+	<th></th>
+</tr>
+<tr>
+	<th>Singular Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Singular Bestämd</th>
+	<th>Plural Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Plural Bestämd</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>en pensionär</td>
+	<td style="text-align:center;">+en</td>
+	<td>pensionären</td>
+	<td>pensionärer</td>
+	<td style="text-align:center;"><strong>+na</strong></td>
+	<td>pensionärerna</td>
+</tr>
+<tr>
+	<td>en son</td>
+	<td style="text-align:center;"> +en</td>
+	<td>sonen</td>
+	<td>soner</td>
+	<td style="text-align:center;"></td>
+	<td>sonerna</td>
+</tr>
+<tr>
+	<td> en lunch</td>
+	<td style="text-align:center;"> +en</td>
+	<td>lunchen</td>
+	<td>luncher</td>
+	<td style="text-align:center;"></td>
+	<td>luncherna</td>
+</tr>
+<tr>
+	<td>en kurs</td>
+	<td style="text-align:center;"> +en</td>
+	<td>kursen</td>
+	<td>kurser</td>
+	<td style="text-align:center;"></td>
+	<td>kurserna</td>
+</tr>
+<tr>
+	<td>en paus</td>
+	<td style="text-align:center;"> +en</td>
+	<td>pausen</td>
+	<td>pauser</td>
+	<td style="text-align:center;"></td>
+	<td>pauserna</td>
+</tr>
+<tr>
+	<td>en buss</td>
+	<td style="text-align:center;">+en</td>
+	<td>bussen</td>
+	<td>busser</td>
+	<td style="text-align:center;"></td>
+	<td>busserna</td>
+</tr>
+<tr>
+	<td>en mobil</td>
+	<td style="text-align:center;"> +en</td>
+	<td>mobilen</td>
+	<td>mobiler</td>
+	<td style="text-align:center;"></td>
+	<td>mobilerna</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p>Ett words end with <strong>vocals</strong> </p>
+
+<table>
+<colgroup>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th>Grupp 4</th>
+	<th style="text-align:center;"></th>
+	<th></th>
+	<th>-n</th>
+	<th style="text-align:center;"></th>
+	<th></th>
+</tr>
+<tr>
+	<th>Singular Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Singular Bestämd</th>
+	<th>Plural Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Plural Bestämd</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>ett arbete</td>
+	<td style="text-align:center;">+t</td>
+	<td>arbetet</td>
+	<td>arbeten</td>
+	<td style="text-align:center;"><strong>+a</strong></td>
+	<td>arbetena</td>
+</tr>
+<tr>
+	<td> ett äpple</td>
+	<td style="text-align:center;"> +t</td>
+	<td>äpplet</td>
+	<td>äpplen</td>
+	<td style="text-align:center;"></td>
+	<td>äpplena</td>
+</tr>
+<tr>
+	<td>ett piano</td>
+	<td style="text-align:center;"> +t</td>
+	<td>pianot</td>
+	<td>pianon</td>
+	<td style="text-align:center;"></td>
+	<td>pianona</td>
+</tr>
+<tr>
+	<td>ett tuggummi</td>
+	<td style="text-align:center;">+t</td>
+	<td>tuggummit</td>
+	<td>tuggummin</td>
+	<td style="text-align:center;"></td>
+	<td>tuggummina</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p>Ett words end with <strong>consonants</strong> </p>
+
+<table>
+<colgroup>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th>Grupp 5</th>
+	<th style="text-align:center;"></th>
+	<th></th>
+	<th>-</th>
+	<th style="text-align:center;"></th>
+	<th></th>
+</tr>
+<tr>
+	<th>Singular Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Singular Bestämd</th>
+	<th>Plural Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Plural Bestämd</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>ett språk</td>
+	<td style="text-align:center;">+et</td>
+	<td>språket</td>
+	<td>språk</td>
+	<td style="text-align:center;"><strong>+en</strong></td>
+	<td>språken</td>
+</tr>
+<tr>
+	<td>ett bord</td>
+	<td style="text-align:center;"> +et</td>
+	<td>bordet</td>
+	<td>bord</td>
+	<td style="text-align:center;"></td>
+	<td>borden</td>
+</tr>
+<tr>
+	<td> ett hus</td>
+	<td style="text-align:center;">+et</td>
+	<td>huset</td>
+	<td>hus</td>
+	<td style="text-align:center;"></td>
+	<td>husen</td>
+</tr>
+<tr>
+	<td> ett år</td>
+	<td style="text-align:center;">+et</td>
+	<td>året</td>
+	<td>år</td>
+	<td style="text-align:center;"></td>
+	<td>åren</td>
+</tr>
+<tr>
+	<td>ett barn</td>
+	<td style="text-align:center;">+et</td>
+	<td>barnet</td>
+	<td>barn</td>
+	<td style="text-align:center;"></td>
+	<td>barnen</td>
+</tr>
+<tr>
+	<td>ett liv</td>
+	<td style="text-align:center;">+et</td>
+	<td>livet</td>
+	<td>liv</td>
+	<td style="text-align:center;"></td>
+	<td>liven</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<table>
+<colgroup>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th>HALVSPECIAL</th>
+	<th style="text-align:center;"></th>
+	<th></th>
+	<th></th>
+	<th style="text-align:center;"></th>
+	<th></th>
+</tr>
+<tr>
+	<th>Singular Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Singular Bestämd</th>
+	<th>Plural Obestämd</th>
+	<th style="text-align:center;">&#8211;</th>
+	<th>Plural Bestämd</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>ett program</td>
+	<td style="text-align:center;">+met</td>
+	<td>programmet</td>
+	<td>program</td>
+	<td style="text-align:center;">+men</td>
+	<td>programmen</td>
+</tr>
+<tr>
+	<td>ett rum</td>
+	<td style="text-align:center;"> +met</td>
+	<td>rummet</td>
+	<td>rum</td>
+	<td style="text-align:center;">+men</td>
+	<td>rummen</td>
+</tr>
+<tr>
+	<td>ett hem</td>
+	<td style="text-align:center;">+met</td>
+	<td>hemmet</td>
+	<td>hem</td>
+	<td style="text-align:center;">+men</td>
+	<td>hemmen</td>
+</tr>
+<tr>
+	<td>en man</td>
+	<td style="text-align:center;">+nen</td>
+	<td>mannen</td>
+	<td>män</td>
+	<td style="text-align:center;"> +nen</td>
+	<td>männen</td>
+</tr>
+<tr>
+	<td>ett fönster</td>
+	<td style="text-align:center;">&#8212;</td>
+	<td>fönstret</td>
+	<td>fönster</td>
+	<td style="text-align:center;">&#8212;</td>
+	<td>fönstren</td>
+</tr>
+<tr>
+	<td>en nyckel</td>
+	<td style="text-align:center;">+n</td>
+	<td>nyckeln</td>
+	<td>nycklar</td>
+	<td style="text-align:center;">+na</td>
+	<td>nycklarna</td>
+</tr>
+<tr>
+	<td>en dator</td>
+	<td style="text-align:center;">+n</td>
+	<td>datorn</td>
+	<td>datorer</td>
+	<td style="text-align:center;">+na</td>
+	<td>datorerna</td>
+</tr>
+<tr>
+	<td>en spegel</td>
+	<td style="text-align:center;">+n</td>
+	<td>spegeln</td>
+	<td>speglar</td>
+	<td style="text-align:center;">+ na</td>
+	<td>speglarna</td>
+</tr>
+<tr>
+	<td>ett land</td>
+	<td style="text-align:center;">+et</td>
+	<td>landet</td>
+	<td>länder</td>
+	<td style="text-align:center;">+na</td>
+	<td>länderna</td>
+</tr>
+<tr>
+	<td>en lärare</td>
+	<td style="text-align:center;">+n</td>
+	<td>läraren</td>
+	<td>lärare</td>
+	<td style="text-align:center;">&#8212;</td>
+	<td>lärarna</td>
+</tr>
+<tr>
+	<td>en läkare</td>
+	<td style="text-align:center;">+n</td>
+	<td>läkaren</td>
+	<td>läkare</td>
+	<td style="text-align:center;">&#8212;</td>
+	<td>läkarna</td>
+</tr>
+<tr>
+	<td> en radio</td>
+	<td style="text-align:center;">+n</td>
+	<td>radion</td>
+	<td></td>
+	<td style="text-align:center;"></td>
+	<td></td>
+</tr>
+<tr>
+	<td> en teve</td>
+	<td style="text-align:center;">+n</td>
+	<td>teven</td>
+	<td>tever</td>
+	<td style="text-align:center;"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+    </div>
+  </div> <!-- End wrapper -->
+</body>
+</html>
